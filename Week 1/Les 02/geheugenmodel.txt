@@ -1,0 +1,12 @@
+Opgave Pijl in het geheugenmodel
+
+Onderdeel A
+Geef zo duidelijk mogelijk aan wat een pijl in het geheugenmodel precies betekent.
+
+Het is een verwijzing naar een andere plek in het geheugen ofwel geheugenadres.
+
+
+Onderdeel B
+Geef aan waar deze pijl precies moet beginnen en waar deze pijl precies naar wijst.
+
+Van een variabele naar een methode.
