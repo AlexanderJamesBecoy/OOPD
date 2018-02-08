@@ -1,0 +1,5 @@
+Zonder 'this.' denkt de compiler dat de variabelen die in de constructor
+geinitialiseerd worden de parameters zijn.
+
+Dus in plaats van de 'private' variabele van de class, wordt de parameter naam wordt
+veranderd naar "kareltje".
