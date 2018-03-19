@@ -1,0 +1,77 @@
+public class Persoon {
+  private String naam;
+
+  public Persoon(String naam) {
+    this.naam = naam;
+  }
+
+  public String getNaam() {
+    return naam;
+  }
+}
+
+public class Rit {
+  private float bedrag;
+  private Persoon meerijder;
+
+  public Rit(float bedrag, Persoon meerijder) {
+    this.bedrag = bedrag;
+    this.meerijder = meerijder;
+  }
+
+  public Persoon getMeeRijder() {
+    return meerijder;
+  }
+
+  public void printRit() {
+    System.out.println(bedrag + " " + meerijder.getNaam());
+  }  
+}
+
+public class Auto {
+  private String model;
+  private Persoon eigenaar;
+  private ArrayList<Rit> ritten = new ArrayList<>();
+  
+  public Auto(String naam, Person eigenaar) {
+     this.model = model;
+     this.eigenaar = eigenaar;
+  }
+
+  public isEigendomVan(Persoon persoon) {
+     return (persoon == eigenaar);
+  }
+
+  public void voegRitToe(Rit rit) {
+     if (!isEigendomVan(rit.getMeeRijder())) {
+       ritten.add(rit);
+       rit.printRit();
+    } else {
+       System.out.println("FOUT! Dit is de eigenaar!");
+    }
+  }
+
+  public void printHoogsteRit() {
+    if (ritten.size() > 0) {
+       sorteerRitten();
+       ritten.get(ritten.size() - 1).printRit(eigenaar);
+    }
+  }
+
+  public void sorteerRitten() {
+     ritten.sorteerVanLaagsteBedragNaarHoogsteBedragOfwelGenaamdMagischeWiskundigeMethode();
+  }
+}
+
+....
+
+public static void main(String[] args) {
+  Persoon p1 = new Persoon("Karel");
+  Persoon p2 = new Persoon("Lies");
+  Persoon p3 = new Persoon("Peter");
+  Auto a1 = new Auto("Mercedes", p1);
+  a1.voegRitToe(new Rit(25.0, p2));
+  a1.voegRitToe(new Rit(20.0, p3));
+  a1.voegRitToe(new Rit(50.0, p1)); // door eigenaar zelf!
+  a1.printHoogsteRit();
+}

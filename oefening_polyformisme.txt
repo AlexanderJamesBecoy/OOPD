@@ -1,0 +1,49 @@
+public abstract class Wapen {
+
+   public abstract void gebruikWapen();
+
+}
+
+public class Pistool extends Wapen {
+
+  @Override
+  public void gebruikWapen() {
+    System.out.println("Pew pew pew");
+  }
+
+}
+
+public class Kanon extends Wapen {
+
+  @Override
+  public void gebruikWapen() {
+    System.out.println("Kaboom");
+  }
+
+}
+
+of
+
+public interface Wapen {
+
+  public void gebruikWapen();
+
+}
+
+public class Pistool implements Wapen {
+
+  @Override
+  public void gebruikWapen() {
+    System.out.println("Pew pew pew");
+  }
+
+}
+
+public class Kanon implements Wapen {
+
+  @Override
+  public void gebruikWapen() {
+    System.out.println("Kaboom");
+  }
+
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>264</y>
+      <w>408</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ChuckALuckSpel
+--
+-saldo : float
+-beker : Dobbelbeker
+-ronde : int
+--
++ChuckALuckSpel(float bedrag)
++toString() : String
++speelRonde(int geluksGetal, float inzet) : void
++storten(float bedrag) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>552</y>
+      <w>300</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Dobbelbeker
+--
+-stenen : Dobbelsteen[3]
+--
++Dobbelbeker()
++toString() : String
++gooiStenen() : void
++getGetallen() : int[3]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>552</y>
+      <w>240</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Dobbelsteen
+--
+-getal : int
+--
++Dobbelsteen()
++toString() : String
++dobbelen() : void
++getGetal() : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>432</y>
+      <w>84</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1 beker</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>624</y>
+      <w>276</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=3 dobbelstenen</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>264</y>
+      <w>204</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>MainApp
+--
+spel : ChuckALuckSpel
+--
++main() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>360</y>
+      <w>288</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1 spel</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
